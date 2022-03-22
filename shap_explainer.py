@@ -144,19 +144,19 @@ class ShapModelExplainer:
         # expected value and shap value
         if type(self.m_model) is XGBClassifier:
             print('xgboost')
-            model_dir = explanatory_dir_model_xg
+            #model_dir = explanatory_dir_model_xg
             self.get_expected_values = get_expected_values
             self.m_shap_value = get_shap_value
             self.m_local_shap_value = get_local_shap_value
             self.link = 'logit'
         elif type(self.m_model) is CatBoostClassifier:
-            model_dir = explanatory_dir_model_cb
+            #model_dir = explanatory_dir_model_cb
             self.get_expected_values = get_expected_values
             self.m_shap_value = get_shap_value
             self.m_local_shap_value = get_local_shap_value
             self.link = 'identity'
         else:
-            model_dir = explanatory_dir_model_rf
+            #model_dir = explanatory_dir_model_rf
             self.get_expected_values = get_expected_values_sklearn
             self.m_shap_value = get_shap_value_sklearn
             self.m_local_shap_value = get_local_shap_value_sklearn
