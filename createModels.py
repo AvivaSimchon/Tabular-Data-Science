@@ -28,7 +28,6 @@ class CreateModels:
         # Build the model with the random forest regression algorithm:
         # model = RandomForestClassifier(max_depth=3, random_state=0, n_estimators=10)
         # XGBOOST
-        XGBClassifier.set_config(verbosity=0)
         model = XGBClassifier()
 
         model.fit(X_train, Y_train)
