@@ -39,7 +39,7 @@ class CreateSample:
         elbow_scores = {}
         for k in range(2, 10):
             # print(k)
-            kmeans_model = KMeans(n_clusters=k, n_jobs=-1)
+            kmeans_model = KMeans(n_clusters=k)
             kmeans_model.fit(self.norm_df)
             # Kmean_Pred = kmeans_model.labels_
             elbow_scores.update({k: kmeans_model.inertia_})
