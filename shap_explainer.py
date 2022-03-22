@@ -43,7 +43,6 @@ import time
 
 
 import utils
-from defs import *
 from utils_str import *
 import datetime
 
